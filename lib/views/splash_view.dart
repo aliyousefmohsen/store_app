@@ -13,7 +13,7 @@ class _SplashViewState extends State<SplashView> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushAndRemoveUntil(context,
           MaterialPageRoute(builder: (context) {
-        return const OnBoarding();
+        return const OnBoardingView();
       }), (route) => false);
     });
   }

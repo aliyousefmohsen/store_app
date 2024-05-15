@@ -31,7 +31,7 @@ class AddBottomSheet extends StatelessWidget {
                     Size(MediaQuery.of(context).size.width, 62))),
             onPressed: () {},
             child: const Text(
-              'Get Started',
+              'Add Item',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,

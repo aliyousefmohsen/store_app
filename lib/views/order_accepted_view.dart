@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_ali/views/components/custom_button.dart';
+import 'package:test_ali/views/explore_view.dart';
 
-class OrderAccepted extends StatelessWidget {
-  const OrderAccepted({super.key});
+class OrderAcceptedView extends StatelessWidget {
+  const OrderAcceptedView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,13 @@ class OrderAccepted extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ExploreView();
+                },
+              ));
+            },
             child: const Text(
               'Back to home',
               style: TextStyle(fontFamily: 'Poppins', fontSize: 18),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test_ali/views/components/custom_button.dart';
 import 'package:test_ali/views/explore_view.dart';
 
-class OnBoarding extends StatelessWidget {
-  const OnBoarding({super.key});
+class OnBoardingView extends StatelessWidget {
+  const OnBoardingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,9 +63,9 @@ class OnBoarding extends StatelessWidget {
                       return ExploreView();
                     }));
                   },
-                  child: Text(
+                  child: const Text(
                     'Get Started',
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                         fontFamily: 'Gilroy',
@@ -74,7 +73,7 @@ class OnBoarding extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 90),
+              const SizedBox(height: 90),
             ],
           ),
         ),

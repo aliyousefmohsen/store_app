@@ -25,6 +25,7 @@ class ExploreView extends StatelessWidget {
       title: 'Meat & Fish',
       image: 'assets/images/explore/Meat + Fish.png',
       bgColor: const Color(0xffF7A593).withOpacity(0.15),
+      click: BeveragesView(),
     ),
     CategoryModel(
       title: 'Bakery & Snacks',
@@ -48,11 +49,13 @@ class ExploreView extends StatelessWidget {
       title: 'Fruit & Vegetable',
       image: 'assets/images/explore/Frach fruit + Vegetable.png',
       bgColor: const Color(0xff836AF6).withOpacity(0.15),
+      click: BeveragesView(),
     ),
     CategoryModel(
       title: 'Cookin & Ghee',
       image: 'assets/images/explore/Cookin oil + Ghee.png',
       bgColor: const Color(0xffD73B77).withOpacity(0.2),
+      click: BeveragesView(),
     ),
   ];
 

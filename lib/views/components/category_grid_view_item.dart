@@ -10,9 +10,7 @@ class CategoryGridViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: category.click == null
-          ? () {
-              print('clickeed');
-            }
+          ? () {}
           : () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return category.click!;

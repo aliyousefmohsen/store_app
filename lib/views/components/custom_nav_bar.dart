@@ -43,7 +43,8 @@ class CustomNavBar extends StatelessWidget {
                     },
                   ));
                 },
-                icon: Icon(Icons.manage_search, color: Colors.black, size: 29),
+                icon: const Icon(Icons.manage_search,
+                    color: Colors.black, size: 29),
               ),
               label: 'Explore'),
           BottomNavigationBarItem(
@@ -55,20 +56,20 @@ class CustomNavBar extends StatelessWidget {
                       },
                     ));
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.shopping_cart,
                     color: Colors.black,
                     size: 28,
                   )),
               label: 'sss'),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.heart,
                 color: Colors.black,
                 size: 28,
               ),
               label: 'sas'),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(
                 Icons.person,
                 color: Colors.black,
