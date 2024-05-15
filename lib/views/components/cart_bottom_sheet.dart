@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_ali/views/components/custom_button.dart';
 import 'package:test_ali/views/components/custom_row_checkout.dart';
 import 'package:test_ali/views/components/head_bottom_sheet.dart';
 
@@ -95,9 +94,24 @@ class CartBottomSheet extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(top: 15, bottom: 30),
-          child: CustomButton(
-            title: 'Place Order',
-            onPressed: () {},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(const Color(0xff53B175)),
+                  minimumSize: MaterialStatePropertyAll(
+                      Size(MediaQuery.of(context).size.width, 62))),
+              onPressed: () {},
+              child: Text(
+                'Get Started',
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.w900),
+              ),
+            ),
           ),
         ),
       ],

@@ -22,7 +22,13 @@ class CustomAppBar extends StatelessWidget {
             ? MainAxisAlignment.center
             : mainAxisAlignment!,
         children: [
-          prefixIcon == null ? const SizedBox() : Icon(prefixIcon!),
+          prefixIcon == null
+              ? const SizedBox()
+              : IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(prefixIcon!)),
           Text(
             title,
             style: const TextStyle(

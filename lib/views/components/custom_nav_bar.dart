@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:test_ali/views/beverages_view.dart';
+import 'package:test_ali/views/explore_view.dart';
+import 'package:test_ali/views/mycart_view.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({
@@ -15,24 +18,49 @@ class CustomNavBar extends StatelessWidget {
         unselectedLabelStyle: const TextStyle(
           color: Colors.black,
         ),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.shop,
-                color: Colors.black87,
-                size: 17,
-              ),
+              icon: IconButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ExploreView();
+                      },
+                    ));
+                  },
+                  icon: const Icon(
+                    FontAwesomeIcons.shop,
+                    color: Colors.black87,
+                    size: 17,
+                  )),
               label: 'Shope'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.manage_search, color: Colors.black, size: 29),
+              icon: IconButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return BeveragesView();
+                    },
+                  ));
+                },
+                icon: Icon(Icons.manage_search, color: Colors.black, size: 29),
+              ),
               label: 'Explore'),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: Colors.black,
-                size: 28,
-              ),
-              label: ''),
+              icon: IconButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return MyCart();
+                      },
+                    ));
+                  },
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.black,
+                    size: 28,
+                  )),
+              label: 'sss'),
           BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.heart,
